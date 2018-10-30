@@ -1,13 +1,13 @@
 
 Pod::Spec.new do |s|
 
-  s.name         = "AXLiveFeed"
-  s.version      = "0.1.0"
+  s.name         = "AXEvents"
+  s.version      = "0.1.1"
   s.summary      = "Apptegy Events classes"
-  s.homepage     = "https://github.com/aruzamen/AXLiveFeed"
+  s.homepage     = "https://github.com/aruzamen/AXEvents"
 
   s.description  = <<-DESC
-                   Main Classes for Apptegy Live Feed section
+                   Main Classes for Apptegy Events section
                    DESC
 
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
