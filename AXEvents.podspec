@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "AXEvents"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "Apptegy Events classes"
   s.homepage     = "https://github.com/aruzamen/AXEvents"
 
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.platform = :ios, '10.3'
   s.swift_version = "4.1"
   s.source_files  = "*.swift"
-  s.resources     = "*.storyboard"
+  s.resources     = "*.storyboard", "Images/**/*.png"
   s.exclude_files = "Classes/Exclude"
   s.requires_arc = true
 
