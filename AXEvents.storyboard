@@ -18,54 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8s8-JQ-twl">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8s8-JQ-twl" customClass="AXNavigationBar" customModule="AXComponents">
                                 <rect key="frame" x="0.0" y="50" width="375" height="90"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzn-DI-vh7">
-                                        <rect key="frame" x="35" y="15" width="210" height="38.5"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High School" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGW-8Y-Bff">
-                                        <rect key="frame" x="35" y="58.5" width="210" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebd-U6-48l">
-                                        <rect key="frame" x="245" y="12.5" width="65" height="65"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="65" id="KZV-cu-Qc7"/>
-                                            <constraint firstAttribute="width" constant="65" id="le1-WQ-rIv"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="events-calendar-button.png"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnQ-5c-7qb">
-                                        <rect key="frame" x="310" y="12.5" width="65" height="65"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="65" id="dsr-Qr-zv9"/>
-                                            <constraint firstAttribute="height" constant="65" id="dyW-JJ-xSg"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="events-menu-button.png"/>
-                                        <connections>
-                                            <action selector="tapSideMenu:" destination="ZNQ-Z7-XG4" eventType="touchUpInside" id="jR1-xa-xRj"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="rnQ-5c-7qb" secondAttribute="trailing" id="0W6-ay-HWN"/>
-                                    <constraint firstItem="Xzn-DI-vh7" firstAttribute="top" secondItem="8s8-JQ-twl" secondAttribute="top" constant="15" id="3fU-ad-fau"/>
                                     <constraint firstAttribute="height" constant="90" id="6B2-mp-OpI"/>
-                                    <constraint firstItem="ebd-U6-48l" firstAttribute="leading" secondItem="Xzn-DI-vh7" secondAttribute="trailing" id="8Hu-Ek-mLL"/>
-                                    <constraint firstItem="gGW-8Y-Bff" firstAttribute="leading" secondItem="8s8-JQ-twl" secondAttribute="leading" constant="35" id="EiW-gr-xpH"/>
-                                    <constraint firstItem="Xzn-DI-vh7" firstAttribute="leading" secondItem="8s8-JQ-twl" secondAttribute="leading" constant="35" id="HZ9-PE-xll"/>
-                                    <constraint firstItem="rnQ-5c-7qb" firstAttribute="centerY" secondItem="8s8-JQ-twl" secondAttribute="centerY" id="NHW-wX-NXd"/>
-                                    <constraint firstItem="ebd-U6-48l" firstAttribute="leading" secondItem="gGW-8Y-Bff" secondAttribute="trailing" id="SyZ-Ka-sHo"/>
-                                    <constraint firstItem="ebd-U6-48l" firstAttribute="centerY" secondItem="8s8-JQ-twl" secondAttribute="centerY" id="jbJ-Ez-thX"/>
-                                    <constraint firstItem="rnQ-5c-7qb" firstAttribute="leading" secondItem="ebd-U6-48l" secondAttribute="trailing" id="sq3-9o-ikx"/>
-                                    <constraint firstItem="gGW-8Y-Bff" firstAttribute="top" secondItem="Xzn-DI-vh7" secondAttribute="bottom" constant="5" id="uUu-rf-VtU"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="sectionName" value="Events"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="organization" value="Elementary"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TRO-db-n9B">
                                 <rect key="frame" x="0.0" y="140" width="375" height="527"/>
@@ -184,8 +145,4 @@
             <point key="canvasLocation" x="172" y="187.55622188905548"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="events-calendar-button.png" width="140" height="140"/>
-        <image name="events-menu-button.png" width="140" height="140"/>
-    </resources>
 </document>
